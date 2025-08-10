@@ -1,0 +1,144 @@
+.check-container {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.habitaciones-titulo {
+  padding: 20px 0 0 0;
+}
+
+.formulario-crear {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.formulario-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.formulario-boton {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.formulario-boton:hover {
+    background-color: #106836;
+  }
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lista-formularios {
+  list-style: none;
+  padding: 0;
+}
+.habitaciones-li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-form {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.lista-pisos {
+  margin-left: 20px;
+}
+
+.piso {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.piso-titulo {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.habitaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.habitaciones label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.formulario-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #888;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2 ease;
+  width: 300px;
+}
+
+.formulario-item:hover {
+  background-color: #3d5d7c;
+}
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .formulario-crear {
+    flex-wrap: wrap;
+  }
+
+  .formulario-input {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .formulario-boton {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+
+  .formulario-item {
+    width: 275px;
+  }
+}
+
+/* Celular (≤480px) */
+@media (max-width: 480px) {
+  .formulario-input,
+  .formulario-boton,
+  .formulario-item {
+    width: 275px;
+  }
+}

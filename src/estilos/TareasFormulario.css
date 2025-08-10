@@ -1,0 +1,54 @@
+.formulario {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.input-tarea {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.boton-agregar {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.boton-agregar:hover {
+  background-color: #106836;
+}
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .formulario {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .input-tarea {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .boton-agregar {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Celular (≤480px) */
+@media (max-width: 480px) {
+  .input-tarea,
+  .boton-agregar {
+    width: 90%;
+  }
+}
