@@ -17,6 +17,9 @@ function App() {
         <Route path="/" element={<AdministradorTareas />} />
         <Route path="/habitaciones" element={<Habitaciones />} /> 
       </Routes>
+      <footer>
+        <p>&copy; 2025 Administrador de Tareas The Niu Crusoe - Bremen</p>
+      </footer>
     </div>
   );
 }

@@ -144,8 +144,8 @@ function Piso({ formId, numero, checks }) {
   // Cálculo de números de habitación
   const inicio = numero * 100 + 1;
   let cantidad;
-  if (numero === 5) cantidad = 20;
-  else if (numero === 6) cantidad = 15;
+  if (numero === 5) cantidad = 18;
+  else if (numero === 6) cantidad = 17;
   else cantidad = 29;
 
   const habitaciones = Array.from(
