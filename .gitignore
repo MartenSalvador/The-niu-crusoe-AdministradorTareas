@@ -17,10 +17,7 @@ dist/
 build/
 .next/
 .out/
-# Paquetes lock (opcional)
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+
 
 # -----------------------------
 # Logs y reportes
