@@ -1,12 +1,18 @@
 import React from "react";
-import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
-import { auth } from "../firebase"; // 👈 tu configuración de firebase.js
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { Navigate } from "react-router-dom";
 
-function Login() {
-  const provider = new GoogleAuthProvider();
+export default function Login() {
+  const [user] = useAuthState(auth);
 
-  // Iniciar sesión con Google
-  const handleLogin = async () => {
+  if (user) {
+    return <Navigate to="/" />; // Si ya está logueado, va al inicio
+  }
+
+  const loginWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
     } catch (error) {
@@ -14,29 +20,10 @@ function Login() {
     }
   };
 
-  // Cerrar sesión
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-    } catch (error) {
-      console.error("Error al cerrar sesión:", error);
-    }
-  };
-
   return (
-    <div style={{ textAlign: "center", marginTop: "3rem" }}>
-      <h2>Administrador de Tareas</h2>
-      <p>Inicia sesión con tu cuenta de Google</p>
-
-      <button onClick={handleLogin} style={{ margin: "1rem", padding: "0.5rem 1rem" }}>
-        Iniciar sesión con Google
-      </button>
-
-      <button onClick={handleLogout} style={{ margin: "1rem", padding: "0.5rem 1rem" }}>
-        Cerrar sesión
-      </button>
+    <div className="login-container">
+      <h2>Iniciar sesión</h2>
+      <button onClick={loginWithGoogle}>Ingresar con Google</button>
     </div>
   );
 }
-
-export default Login;
